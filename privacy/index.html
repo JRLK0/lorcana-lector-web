@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de privacidad de Lorcana Lector</title>
+  <style>
+    body { margin: 0; background: #f8f3e8; color: #211c24; font: 16px/1.65 system-ui, sans-serif; }
+    main { max-width: 820px; margin: 0 auto; padding: 40px 22px 80px; }
+    h1, h2 { font-family: Georgia, serif; }
+    h1 { font-size: 2.2rem; } h2 { margin-top: 2rem; color: #56376d; }
+    a { color: #56376d; } .notice { padding: 16px; border-radius: 16px; background: #ecdcf3; }
+    hr { margin: 48px 0; border: 0; border-top: 1px solid #d1c6ce; }
+  </style>
+</head>
+<body><main>
+  <h1>Política de privacidad de Lorcana Lector</h1>
+  <p><strong>Fecha de entrada en vigor: 20 de agosto de 2026</strong></p>
+  <p class="notice">Responsable: Jorge Megía. Contacto de privacidad: <a href="mailto:jorgemegia96@gmail.com">jorgemegia96@gmail.com</a>.</p>
+
+  <h2>Resumen</h2>
+  <p>Lorcana Lector requiere una cuenta para sincronizar la colección entre Android y la web. No contiene publicidad ni vende información personal. Las imágenes de la cámara se procesan en memoria en el dispositivo para reconocer cartas y no son guardadas ni enviadas por la aplicación.</p>
+
+  <h2>Datos y permisos</h2>
+  <ul>
+    <li><strong>Cámara:</strong> se utiliza únicamente cuando el usuario abre el escáner. Las imágenes y el texto reconocido permanecen en el dispositivo.</li>
+    <li><strong>Cuenta:</strong> se trata el correo electrónico, el identificador interno de usuario y la información técnica necesaria para autenticar y proteger el acceso.</li>
+    <li><strong>Colección:</strong> cartas, cantidades, idioma y acabado se almacenan localmente y en PostgreSQL para sincronizarlas entre dispositivos. La copia automática de Android está desactivada.</li>
+    <li><strong>Archivos CSV:</strong> la aplicación solo lee o escribe el archivo que el usuario selecciona expresamente mediante el selector de Android.</li>
+    <li><strong>Internet:</strong> se usa para descargar catálogo, imágenes y precios. Los servidores que reciben la solicitud pueden recibir datos técnicos necesarios para la conexión, como la dirección IP.</li>
+  </ul>
+
+  <h2>Servicios de terceros</h2>
+  <ul>
+    <li><strong>ML Kit de Google:</strong> realiza el reconocimiento de texto en el dispositivo. No envía a Google las imágenes, el texto reconocido ni los resultados. El SDK sí recopila información de la aplicación y el dispositivo, un identificador de instalación, eventos de uso, errores y métricas de rendimiento para diagnóstico, mantenimiento y mejora. Estos datos se cifran en tránsito y Google indica que no se comparten con terceros.</li>
+    <li><strong>Lorcast:</strong> proporciona metadatos e imágenes públicas del catálogo.</li>
+    <li><strong>Cardmarket/S3:</strong> proporciona archivos públicos de productos y precios.</li>
+    <li><strong>Supabase:</strong> presta autenticación, PostgreSQL, API y sincronización en tiempo real. El proyecto se aloja en la Unión Europea (Irlanda) y aplica políticas RLS por usuario.</li>
+  </ul>
+
+  <h2>Menores</h2>
+  <p>La aplicación no está dirigida a menores de 13 años. No permite comunicarse con otras personas, realizar compras ni ver publicidad. No solicita ubicación, contactos ni identificadores publicitarios. La cámara solo se activa tras una acción clara del usuario y su permiso de Android.</p>
+
+  <h2>Conservación y eliminación</h2>
+  <p>La cuenta y la colección sincronizada se conservan hasta que el usuario selecciona «Eliminar cuenta y datos» en Android o en la web. La eliminación borra el usuario, el perfil y la colección alojada, además de la copia local en Android. «Borrar colección» elimina las cantidades sin eliminar la cuenta. Las métricas técnicas de ML Kit se someten a las políticas de conservación de Google.</p>
+
+  <h2>Seguridad y control</h2>
+  <p>Las conexiones utilizan HTTPS y el tráfico sin cifrar está desactivado. PostgreSQL aplica reglas RLS para limitar cada consulta al usuario autenticado. El permiso de cámara puede retirarse desde los ajustes de Android. La colección puede exportarse, importarse o borrarse desde la aplicación.</p>
+
+  <h2>Cambios y contacto</h2>
+  <p>Esta política se actualizará si cambian las funciones o los servicios utilizados. Las consultas sobre privacidad pueden enviarse a <a href="mailto:jorgemegia96@gmail.com">jorgemegia96@gmail.com</a>.</p>
+
+  <hr>
+  <h1 lang="en">Lorcana Lector Privacy Policy</h1>
+  <p lang="en"><strong>Effective date: August 20, 2026</strong></p>
+  <p class="notice" lang="en">Controller: Jorge Megía. Privacy contact: <a href="mailto:jorgemegia96@gmail.com">jorgemegia96@gmail.com</a>.</p>
+
+  <div lang="en">
+    <h2>Summary</h2>
+    <p>Lorcana Lector requires an account to synchronize a collection between Android and the web. It contains no advertising and does not sell personal information. Camera images are processed in device memory and are not stored or transmitted by the app.</p>
+    <h2>Data and permissions</h2>
+    <ul>
+      <li><strong>Camera:</strong> used only while the scanner is open. Images and recognized text remain on the device.</li>
+      <li><strong>Account:</strong> the email address, internal user identifier, and technical authentication data are processed to protect access.</li>
+      <li><strong>Collection:</strong> cards, quantities, language, and finish are stored locally and in PostgreSQL for cross-device synchronization. Android automatic backup is disabled.</li>
+      <li><strong>CSV files:</strong> the app reads or writes only a file expressly selected through Android's system picker.</li>
+      <li><strong>Internet:</strong> used to download catalog data, images, and prices. Servers may receive technical connection data such as the IP address.</li>
+    </ul>
+    <h2>Third-party services</h2>
+    <p>Google ML Kit processes camera input on-device and does not send images, recognized text, or results to Google. The SDK does collect app and device information, an installation identifier, usage events, errors, and performance metrics. Lorcast supplies public catalog metadata and images. Cardmarket/S3 supplies public product and price files. Supabase provides authentication, PostgreSQL, API, and real-time synchronization from its EU (Ireland) region.</p>
+    <h2>Children</h2>
+    <p>The app is not directed to children under 13. It has no user communication, purchases, or advertising, and does not request location, contacts, or advertising identifiers. Camera access requires a clear user action and Android permission.</p>
+    <h2>Retention, deletion, and security</h2>
+    <p>The account and synchronized collection remain until the user selects “Delete account and data” in Android or on the web. This deletes the hosted user, profile, and collection and the local Android copy. Network connections use HTTPS, cleartext traffic is disabled, and PostgreSQL RLS restricts records to the authenticated user.</p>
+    <h2>Contact</h2>
+    <p>Questions may be sent to <a href="mailto:jorgemegia96@gmail.com">jorgemegia96@gmail.com</a>.</p>
+  </div>
+</main></body>
+</html>
