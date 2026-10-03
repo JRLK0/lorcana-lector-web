@@ -451,18 +451,16 @@ function deckFilterCard(card: CatalogCard): FilterableCard {
 }
 
 export function PublicDeck({ deckId }: { deckId: string }) {
-  const [deck, setDeck] = useState<Deck | null>(null)
+  const [deck, setDeck] = useState<Pick<Deck, 'id' | 'name' | 'description'> | null>(null)
   const [entries, setEntries] = useState<DeckEntry[]>([])
   const [error, setError] = useState('')
   const [selectedCard, setSelectedCard] = useState<ViewerCard | null>(null)
 
   useEffect(() => {
-    Promise.all([
-      supabase.from('decks').select('*').eq('id', deckId).eq('is_public', true).single(),
-      supabase.from('deck_entries').select('*').eq('deck_id', deckId),
-    ]).then(([deckResult, entryResult]) => {
-      if (deckResult.error || entryResult.error) setError('Este mazo no existe o es privado.')
-      else { setDeck(deckResult.data as Deck); setEntries((entryResult.data ?? []) as DeckEntry[]) }
+    supabase.rpc('get_public_deck', { target_deck_id: deckId }).then(({ data, error: requestError }) => {
+      const publicDeck = data as { deck: Pick<Deck, 'id' | 'name' | 'description'>; entries: DeckEntry[] } | null
+      if (requestError || !publicDeck) setError('Este mazo no existe o es privado.')
+      else { setDeck(publicDeck.deck); setEntries(publicDeck.entries ?? []) }
     })
   }, [deckId])
 
